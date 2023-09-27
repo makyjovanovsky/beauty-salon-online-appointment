@@ -27,8 +27,6 @@ public class OrderService {
     private final UserRepository userRepository;
     private final ProductRepository productRepository;
     private final OrderRepository orderRepository;
-    private static final String ACCOUNT_SID = "AC773ecbd8592a5cad8169cd06c3ce6e13";
-    private static final String AUTH_TOKEN = "51247e92a82c11f5a929c4e3ae6c2953";
 
     @Autowired
     public OrderService(UserRepository userRepository, ProductRepository productRepository, OrderRepository orderRepository) {
@@ -116,12 +114,6 @@ public class OrderService {
     public void changeOrderStatus(Long id) {
         Optional<OrderEntity> orderEntity = orderRepository.findById(id);
         orderEntity.ifPresent(entity -> entity.setStatus("AWAITING PICKUP"));
-//        Twilio.init(ACCOUNT_SID,AUTH_TOKEN);
-//        Message message = Message.creator(
-//                        new com.twilio.type.PhoneNumber(getUser().getNumber().replaceFirst("0","+389")),
-//                        new com.twilio.type.PhoneNumber("+1 815 567 9673"),
-//                        "YOUR ORDER IS HERE")
-//                .create();
     }
 
     public UserEntity getUser() {
