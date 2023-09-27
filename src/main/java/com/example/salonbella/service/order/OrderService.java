@@ -7,8 +7,6 @@ import com.example.salonbella.entity.UserEntity;
 import com.example.salonbella.repository.OrderRepository;
 import com.example.salonbella.repository.ProductRepository;
 import com.example.salonbella.repository.UserRepository;
-import com.twilio.Twilio;
-import com.twilio.rest.api.v2010.account.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
